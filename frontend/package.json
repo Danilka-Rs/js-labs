@@ -1,0 +1,17 @@
+{
+  "name": "cashback-lab6-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for cashback lab 6 with fetch and Vite",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
+    "bootstrap": "^5.3.3",
+    "vite": "^5.4.11"
+  },
+  "devDependencies": {}
+}
