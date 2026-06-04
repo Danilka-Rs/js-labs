@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор Лаба 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="badge">
+    <mark>Кэшбэк-Калькулятор</mark>
+  </div>
+
+
+  <details class="info-fold">
+    <summary>Автор</summary>
+    <div class="info-content">
+      <p>ФИО: <span class="highlight">Потапов Д.C.</span></p>
+      <p>Группа: <span class="highlight">иу5-44б</span></p>
+    </div>
+  </details>
+
+
+  <main class="terminal">
+    
+    <div id="result" class="screen">0<span class="cursor">_</span></div>
+
+    <div class="grid">
+      <div class="r">
+        <button class="k s">C</button>
+        <button class="k s">+/-</button>
+        <button class="k s">%</button>
+        <button class="k o">/</button>
+      </div>
+      <div class="r">
+        <button class="k">7</button>
+        <button class="k">8</button>
+        <button class="k">9</button>
+        <button class="k o">×</button>
+      </div>
+      <div class="r">
+        <button class="k">4</button>
+        <button class="k">5</button>
+        <button class="k">6</button>
+        <button class="k o">−</button>
+      </div>
+      <div class="r">
+        <button class="k">1</button>
+        <button class="k">2</button>
+        <button class="k">3</button>
+        <button class="k o">+</button>
+      </div>
+      <div class="r">
+        <button class="k z">0</button>
+        <button class="k">.</button>
+        <button class="k e">=</button>
+      </div>
+    </div>
+
+    <!-- Задание 17: Выпадающий список -->
+    <div class="ctrl">
+      <label>▹ стиль:</label>
+      <select id="theme">
+        <option value="cyan">cyan</option>
+        <option value="amber">amber</option>
+        <option value="lime">lime</option>
+      </select>
+    </div>
+
+
+    <a href="https://github.com/DanilkaPotapov" class="git" target="_blank">[github]</a>
+
+  </main>
+
+
+  
+<footer class="sign">
+  <img src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png" 
+       alt="кэшбек" 
+       class="cashback-icon"
+       width="20" 
+       height="20">
+  Потапов Д. | Электронные услуги + Кэшбек
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7utTQM1oXTU4zKfec0lNAjnMawXy4RCqz1g&s" 
+       alt="money" 
+       class="cashback-icon"
+       width="40" 
+       height="40">
+</footer>
+
+  <script>
+    
+    const resultElement = document.getElementById('result');
+    let displayValue = '0';
+    
+    function updateDisplay() {
+      resultElement.innerHTML = displayValue + '<span class="cursor">_</span>';
+    }
+    
+    document.querySelectorAll('.k').forEach(btn => {
+      btn.onclick = () => {
+        const buttonText = btn.textContent;
+        
+        if (buttonText === 'C') {
+          displayValue = '0';
+          updateDisplay();
+        }
+        
+        else if (buttonText === '=') {
+          displayValue = 'OK';
+          updateDisplay();
+        }
+        else if (['+', '−', '×', '/', '%', '+/-'].includes(buttonText)) {
+          console.log('Оператор нажат:', buttonText);
+        }
+        else {
+          if (displayValue === '0' || displayValue === 'OK') {
+            displayValue = buttonText;
+          } else {
+            displayValue += buttonText;
+          }
+          updateDisplay();
+        }
+      }
+    });
+    
+    document.getElementById('theme').onchange = function() {
+      document.body.className = this.value;
+    }
+  </script>
+</body>
+</html>
