@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор Лаба 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="badge">
+    <mark>Кэшбэк-Калькулятор</mark>
+  </div>
+
+  <details class="info-fold">
+    <summary>Автор</summary>
+    <div class="info-content">
+      <p>ФИО: <span class="highlight">Потапов Д.С.</span></p>
+      <p>Группа: <span class="highlight">ИУ5-44Б</span></p>
+    </div>
+  </details>
+
+  <main class="terminal">
+    <div id="result" class="screen">0<span class="cursor">_</span></div>
+
+    <div class="grid">
+      <div class="r">
+        <button class="k s" id="btn_op_clear">C</button>
+        <button class="k s" id="btn_op_back">←</button>
+        <button class="k s" id="btn_op_sign">+/-</button>
+        <button class="k s" id="btn_op_percent">%</button>
+      </div>
+
+      <div class="r">
+        <button class="k s" id="btn_op_sqrt">√</button>
+        <button class="k s" id="btn_op_square">x²</button>
+        <button class="k o" id="btn_op_div">/</button>
+        <button class="k o" id="btn_op_mult">×</button>
+      </div>
+
+      <div class="r">
+        <button class="k" id="btn_digit_7">7</button>
+        <button class="k" id="btn_digit_8">8</button>
+        <button class="k" id="btn_digit_9">9</button>
+        <button class="k o" id="btn_op_minus">−</button>
+      </div>
+
+      <div class="r">
+        <button class="k" id="btn_digit_4">4</button>
+        <button class="k" id="btn_digit_5">5</button>
+        <button class="k" id="btn_digit_6">6</button>
+        <button class="k o" id="btn_op_plus">+</button>
+      </div>
+
+      <div class="r">
+        <button class="k" id="btn_digit_1">1</button>
+        <button class="k" id="btn_digit_2">2</button>
+        <button class="k" id="btn_digit_3">3</button>
+        <button class="k" id="btn_digit_dot">.</button>
+      </div>
+
+      <div class="r">
+        <button class="k z" id="btn_digit_0">0</button>
+        <button class="k e" id="btn_op_equal">=</button>
+      </div>
+    </div>
+
+    <div class="ctrl">
+      <label for="theme">▹ стиль:</label>
+      <select id="theme">
+        <option value="">cyan</option>
+        <option value="amber">amber</option>
+        <option value="lime">lime</option>
+      </select>
+    </div>
+
+    <a href="https://github.com/DanilkaPotapov" class="git" target="_blank">[github]</a>
+  </main>
+
+  <footer class="sign">
+    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png"
+         alt="кэшбек"
+         class="cashback-icon"
+         width="20"
+         height="20">
+    Потапов Д. | Электронные услуги + Кэшбек
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7utTQM1oXTU4zKfec0lNAjnMawXy4RCqz1g&s"
+         alt="money"
+         class="cashback-icon"
+         width="40"
+         height="40">
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
