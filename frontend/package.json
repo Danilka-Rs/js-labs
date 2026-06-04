@@ -1,0 +1,9 @@
+{
+  "name": "cashback-lab5-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for cashback lab 5 with XHR",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
